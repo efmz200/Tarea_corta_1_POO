@@ -18,7 +18,7 @@ class Ficha:
         #aquí se vuelve claro por qué necesitamos un dado
         pasos = self.dado.lanzar()
         self.posicion += pasos
-        print(self.color+" avanzó: "+str(self.posicion)+" posiciones")
+        print(self.color+" avanzó: "+str(pasos)+" posiciones")
     
 
 
