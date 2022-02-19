@@ -21,9 +21,9 @@ class Tablero:
         self.jugadores+=[Ficha(color)]
     
     def mostrar_orden(self):
-        print("\n La meta esta en la posición: "+str(self.cantidad_casillas))
+        print("\nLa meta esta en la posición: "+str(self.cantidad_casillas))
         for player in self.jugadores:
-            print("El jugador: "+player.color+" está en la casilla: "+str(player.posicion))
+            print("El jugador: "+player.color+" está en la casilla: "+str(player.posicion+"\n"))
         print("")
         
         #inicialice aquí todos los atributos
