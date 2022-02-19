@@ -27,9 +27,12 @@ class Main:
                 opcion=input("ingrese 1 para lanzar el dado o presione enter para continuar: ")
                 if opcion=="1":
                     self.tablero.jugadores[turno].avanzar()
+                    if(self.tablero.jugadores[turno].posicion>=self.tablero.cantidad_casillas):
+                        print("La ficha color: "+self.tablero.jugadores[turno].color+ "ha ganado")
+                        break
                 self.tablero.jugador_actual+=1
 
 
 
-juego=Main(30)
+juego=Main(10)
 juego.jugar()
