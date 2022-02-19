@@ -17,14 +17,14 @@ class Tablero:
         self.jugador_actual=0
     
     def agregar_jugador(self):
-        color=input("Ingrese el color de la nueva ficha")
-        self.jugadores+=[Ficha(),color]
+        color=input("Ingrese el color de la nueva ficha: ")
+        self.jugadores+=[Ficha(color)]
     
     def mostrar_orden(self):
-        print("La meta esta en la posición: "+str(self.cantidad_casillas))
+        print("\n La meta esta en la posición: "+str(self.cantidad_casillas))
         for player in self.jugadores:
-            print("El jugador: "+player.color+"esta en la casilla: "+str(player.poscion))
-        
+            print("El jugador: "+player.color+" está en la casilla: "+str(player.posicion))
+        print("")
         
         #inicialice aquí todos los atributos
         #no olvide usar self.atributo para acceder el atributo de la clase
