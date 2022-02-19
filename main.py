@@ -8,7 +8,7 @@ class Main:
         #loop de agregado de jugadores
         while True:
             opcion=1
-            opcion=input("ingrese 1 para agregar otro jugador o presione enter para continuar ")
+            opcion=input("Ingrese 1 para agregar otro jugador o presione enter para continuar ")
             if opcion=="1":
                 self.tablero.agregar_jugador()
             else:
@@ -24,7 +24,7 @@ class Main:
             else:
                 print("Es turno de la ficha color: "+self.tablero.jugadores[turno].color)
                 
-                opcion=input("ingrese 1 para lanzar el dado o presione enter para continuar: ")
+                opcion=input("Ingrese 1 para lanzar el dado o presione enter para continuar: ")
                 if opcion=="1":
                     self.tablero.jugadores[turno].avanzar()
                     if(self.tablero.jugadores[turno].posicion>=self.tablero.cantidad_casillas):
@@ -33,6 +33,16 @@ class Main:
                 self.tablero.jugador_actual+=1
 
 
+def iniciar():
+    casillas=input("Ingrese la cantidad de casillas que desea que tenga el juego: ")
+    print("")
+    try:
+        juego=Main(int(casillas))
+        juego.jugar()
+    except:
+        print("Debe ingresar un entero\n")
+        iniciar()
+iniciar()   
+   
 
-juego=Main(10)
-juego.jugar()
+
