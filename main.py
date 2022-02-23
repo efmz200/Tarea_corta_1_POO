@@ -33,16 +33,10 @@ class Main:
                 self.tablero.jugador_actual+=1
 
 
-def iniciar():
-    casillas=input("Ingrese la cantidad de casillas que desea que tenga el juego: ")
-    print("")
-    try:
-        juego=Main(int(casillas))
-        juego.jugar()
-    except:
-        print("Debe ingresar un entero\n")
-        iniciar()
-iniciar()   
+juego=Main(40)
+juego.jugar()
+    
+  
    
 
 
